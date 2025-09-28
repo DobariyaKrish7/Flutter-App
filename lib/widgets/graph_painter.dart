@@ -111,9 +111,6 @@ class AnimatedGraphPainter extends CustomPainter {
       total += len;
     }
     if (total < 1e-3) return;
-
-    // Determine bubble positions along the cumulative path.
-    // One full controller cycle goes from root to selected.
     final leadDist = connectionAnimation * total;
     final spacing = isMobile ? 60.0 : 90.0; // distance between bubbles
     final bubbleCount = isMobile ? 2 : 3; // number of equally styled bubbles
